@@ -182,7 +182,20 @@ offlineInstall(){
         source /usr/share/bash-completion/completions/docker
     fi
 }
-
+docker_install()
+{
+	echo "检查Docker......"
+	docker -v
+    if [ $? -eq  0 ]; then
+        echo "检查到Docker已安装!"
+    else
+    	echo "安装docker环境..."
+        main
+        echo "安装docker环境...安装完成!"
+    fi
+    # 创建公用网络==bridge模式
+    #docker network create share_network
+}
 main(){
     checkSys
     [[ $OFFLINE_FILE ]] && offlineInstall || onlineInstall
@@ -195,6 +208,6 @@ main(){
 start(){
 docker run -d --name unblockneteasemusic -p 8080:8080 nondanee/unblockneteasemusic:latest -s -e https://music.163.com -p 8080:8081
 }
-main
+docker_install
 start
 echo "运行完成端口8080"
