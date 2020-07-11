@@ -141,7 +141,8 @@ service UnblockNeteaseMusic restart
 }
 http_toss(){
 mkdir goproxy && cd goproxy 
-wget -N --no-check-certificate https://github.com/demo2099/OneStepUnblockNeteaseMusic/releases/download/9.9/proxy-linux-amd64.tar.gz tar zxvf proxy-linux-amd64.tar.gz && rm proxy-linux-amd64.tar.gz 
+wget -N --no-check-certificate https://github.com/demo2099/OneStepUnblockNeteaseMusic/releases/download/9.9/proxy-linux-amd64.tar.gz 
+tar zxvf proxy-linux-amd64.tar.gz && rm proxy-linux-amd64.tar.gz 
 cat > /etc/systemd/system/gogo.service <<EOF
 [Unit]
 Description=gogo
