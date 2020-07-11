@@ -6,4 +6,5 @@ wget https://raw.githubusercontent.com/demo2099/OneStepUnblockNeteaseMusic/maste
 国内服务器
 
 git clone  https://github.com/demo2099/OneStepUnblockNeteaseMusic.git
+
 cd OneStepUnblockNeteaseMusic  && bash mult_unblockmusic.sh
