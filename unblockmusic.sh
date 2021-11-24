@@ -98,7 +98,7 @@ install_node(){
 
 start_blockmuaicservice(){
   cd /root
-  git clone https://github.com/nondanee/UnblockNeteaseMusic.git
+  git clone https://github.com/UnblockNeteaseMusic/server.git UnblockNeteaseMusic
   cd UnblockNeteaseMusic
   #node app.js -s -e https://music.163.com -p 8080:8081
 }
